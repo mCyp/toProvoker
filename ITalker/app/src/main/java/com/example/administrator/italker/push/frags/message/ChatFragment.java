@@ -293,6 +293,7 @@ public abstract class ChatFragment<InitModel> extends PresenterFragment<ChatCont
     @Override
     public void onAdapterDataChanged() {
         // 由于没有占位布局，所以revyvlerView会一直显示
+        mRecyclerView.smoothScrollToPosition(mAdapter.getItemCount());
     }
 
     @Override
